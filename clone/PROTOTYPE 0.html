@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>  
+    
+		<title> PROTOTYPE 0 </title>
+    
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles2.css">
+    <link rel="icon" href="hhhh.png" type="image/x-icon"/>
+    </head>
+    
+<body>
+   
+    
+
+  <a name="2"> </a>
+    
+  
+  <div class="fixed-bar">
+    <div>
+      <div ><table style="padding-left: 0%;">
+        <tr >
+        <th id="reloadButton" style="padding-left: 20%;" ><a href="/">
+          <img  style="height: 100PX;width: 400px;" src="https://www.docplanner.com/img/logo-default-group-en.svg?v=1" alt="Docplanner Group">
+        </a> </th>
+        <th style="padding-left: 90%;"><h1   style="color: #ae00ff"><a href="#2">WORK</a></h1> </th>
+        
+        <th style="padding-left: 95%;"><h1   style="color: #ae00ff"><a href="#4">CONTACT</a></h1> </th>
+    </table></div>
+      
+    </div>
+  </div>
+  
+  
+  
+  
+<br><br><br><br><br><br><br><br>
+   
+    
+
+<DIv class="container">
+<DIV  class="box box-1" onmouseover="playSound()">
+  
+    <h1 style="color: #4CAF50; text-align: center;">ABOUT ME!</h1><br>
+    <h2  style="color: #da3e00">I have nothing to talk about me so here is a bunch of useless stories U welcome </h2><h2  >Once upon a time, in a land far, far away, there existed an enchanted forest filled with mystical creatures and magical wonders. The towering trees whispered ancient secrets to the gentle breeze, and the soft glow of fireflies illuminated the night sky like a thousand twinkling stars.
+    Amidst the emerald foliage
+</h2></DIV>
+
+  
+<DIV class="box box-1" onmouseover="playSound()"">
+    <h1 style="color: #ff00c8; text-align: center;">WORK!</h1><br>
+    <h2 style="color: #da3e00">AS IF I HAVE ONE WELL THANK GOD GAME DEV EXISTS , ANYWAYS BACK TO OUR TOPIC </h2><h2>Once upon a time, in a land far, far away, there existed an enchanted forest filled with mystical creatures and magical wonders. The towering trees whispered ancient secrets to the gentle breeze, and the soft glow of fireflies illuminated the night sky like a thousand twinkling stars.
+    Amidst the emerald foliage
+</h2></DIV>
+<DIV class="box box-1" onmouseover="playSound()"">
+  <h1 style="color: #ff00c8; text-align: center;">WORK!</h1><br>
+  <h2 style="color: #da3e00">AS IF I HAVE ONE WELL THANK GOD GAME DEV EXISTS , ANYWAYS BACK TO OUR TOPIC </h2><h2>Once upon a time, in a land far, far away, there existed an enchanted forest filled with mystical creatures and magical wonders. The towering trees whispered ancient secrets to the gentle breeze, and the soft glow of fireflies illuminated the night sky like a thousand twinkling stars.
+  Amidst the emerald foliage
+</h2></DIV>
+</DIv>
+  
+<audio id="hoverSound">
+  <source src="sound.mp3" type="audio/mpeg"></audio>
+<CENTER><iframe
+	width="900"
+	height="600"
+  
+	src="https://www.youtube.com/embed/zcTFG_F0FRs"
+></iframe></CENTER>
+    <br>
+
+
+  
+
+  
+
+    <br><br>
+<hr class="new4">
+    <a name="4"> </a>
+    <di class="boxh" ><h1  style="color: #9900ff; text-align: center;">CONTACT!</h1><br>
+        <div class="containerd"><div ><h2 style="color: #da3e00">CONTACT US! OR ME WHATEVER XD </h2>
+      <table>
+        <form >
+          <th><label style="width: 300px; height: 35px;">MAIL:</label>
+          <input style="width: 300px; height: 35px;" type="text" name="first name" placeholder="Type your mail adress" />
+          <br />
+        </form></th>
+        <th><select style="width: 100px; height: 40px;">
+          <option value="1">Gmail</option>
+          <option value="2">outlook</option>
+          <option value="3">yahoo</option>
+          <option value="4">personal</option>
+          <option value="5">other</option>
+        </select></th>
+      </table>
+      <label style="width: 100px; height: 40px;">
+        <h2 style="color: #003cff"><input style="width: 20px; height: 20px;" type="checkbox" name="exampleCheckbox">recieve fake newsletter</h2>
+        <center><input style="width: 200px; height: 40px ; text-align: center;"type="submit" value="Submit" " /></center>
+      </label></div>
+      <div class="box-6"><center><img style="height: 350px;width: 350px; " src="hhhh.png" alt="Gomycode" /></center>
+      <center><h3 style="color: antiquewhite;">ALL RIGHTS RESERVED</h3></center>
+      <center><h5 style="color: antiquewhite;">not really</h5></center></div></div></div>
+</body>
+</html>
+<script>
+  const box = document.querySelector(".container");
+
+  const options = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.5, // Adjust this value to control when the animation starts
+  };
+
+  const handleIntersect = (entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        box.style.opacity = "2";
+        box.style.transform = "translateY(0)";
+        observer.unobserve(entry.target); // Stop observing once the animation is triggered
+      }
+    });
+  };
+
+  const observer = new IntersectionObserver(handleIntersect, options);
+  observer.observe(box);
+  
+
+
+</script>
+<script>
+function playSound() {
+  const hoverSound = document.getElementById("hoverSound");
+  hoverSound.play();
+  }
+</script>
+<script>document.getElementById("reloadButton").addEventListener("click", function() {
+  location.reload();
+});</script>

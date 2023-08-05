@@ -1,0 +1,30 @@
+.hah {
+	
+	font-family: roboto;
+  font-size: 40px;
+  
+
+	
+}
+
+
+.ll {
+  font-weight: bold;
+  background-color: #333;
+  
+  padding: .5em;
+}
+img {
+  -webkit-mask:linear-gradient(#0000,#000);
+          mask:linear-gradient(#0000,#000);
+}
+img + img {
+  -webkit-mask:linear-gradient(#0000 50%,#000 0);
+          mask:linear-gradient(#0000 50%,#000 0);
+}
+
+
+
+body {
+  background: linear-gradient(90deg,#000000,#000000);
+}
