@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shopping Cart</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+  }
+  .cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  .item-info {
+    flex-grow: 1;
+    margin-left: 10px;
+  }
+  .quantity {
+    display: flex;
+    align-items: center;
+  }
+  .quantity button {
+    background-color: #eee;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  .heart {
+    color: gray;
+    cursor: pointer;
+  }
+  .heart.liked {
+    color: red;
+  }
+</style>
+</head>
+<body>
+  <input type="text" id="inputField" placeholder="Enter something">
+  <button onclick="saveInput()">Save</button>
+  <h1>Shopping Cart</h1>
+  <div class="cart">
+    <div class="cart-item">
+      <img src="item1.jpg" alt="Item 1" width="50">
+      <div class="item-info">
+        <h3>Item 1</h3>
+        <p>$10.00</p>
+        <div class="quantity">
+          <button class="minus">-</button>
+          <span class="qty">1</span>
+          <button class="plus">+</button>
+        </div>
+        <span class="heart">&#x2661;</span>
+      </div>
+      <button class="delete">Delete</button>
+    </div>
+    
+    <div class="cart-item">
+      <img src="item2.jpg" alt="Item 2" width="50">
+      <div class="item-info">
+        <h3>Item 2</h3>
+        <p>$20.00</p>
+        <div class="quantity">
+          <button class="minus">-</button>
+          <span class="qty">1</span>
+          <button class="plus">+</button>
+        </div>
+        <span class="heart">&#x2661;</span>
+      </div>
+      <button class="delete">Delete</button>
+    </div>
+  </div>
+  <p>Total: $<span id="total">30.00</span></p>
+
+  <script>
+    const items = document.querySelectorAll('.cart-item');
+    const totalElement = document.getElementById('total');
+
+    items.forEach(item => {
+      const quantityElement = item.querySelector('.qty');
+      const minusButton = item.querySelector('.minus');
+      const plusButton = item.querySelector('.plus');
+      const deleteButton = item.querySelector('.delete');
+      const heartButton = item.querySelector('.heart');
+
+      let quantity = 1;
+
+      minusButton.addEventListener('click', () => {
+        if (quantity > 1) {
+          quantity--;
+          quantityElement.textContent = quantity;
+          updateTotal();
+        }
+      });
+
+      plusButton.addEventListener('click', () => {
+        quantity++;
+        quantityElement.textContent = quantity;
+        updateTotal();
+      });
+
+      deleteButton.addEventListener('click', () => {
+        item.remove();
+        updateTotal();
+      });
+
+      heartButton.addEventListener('click', () => {
+        heartButton.classList.toggle('liked');
+      });
+    });
+
+    function updateTotal() {
+      let total = 0;
+      items.forEach(item => {
+        const price = parseFloat(item.querySelector('.item-info p').textContent.slice(1));
+        const quantity = parseInt(item.querySelector('.qty').textContent);
+        total += price * quantity;
+      });
+      totalElement.textContent = total.toFixed(2);
+    }
+  </script>
+</body>
+</html>
