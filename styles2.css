@@ -1,0 +1,270 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-image: url(xxx.jpg);
+  background-size:cover;
+  background-repeat: repeat-y;
+}
+
+.container {
+  display: flex;
+  padding-left: 1px;
+  align-items: right;
+  height: 700px;
+  transform: translateY(45px);
+  transition: opacity 1s ease, transform 1s ease;
+  margin-left: 130px;
+}
+.containerd {
+  display: flex;
+  padding-left: 15px;
+  align-items: right;
+  height: 5vh;
+}
+#rcorners2 {
+  border-radius: 25px;
+  align-self: center;
+  border: 3px solid rgb(106,239,233);
+  padding: 40px; 
+  width: 190px;
+  height: 310px;  
+}
+.one {
+  border-style: solid;
+  border-color: aquamarine;
+  border-width: 10%;
+  box-sizing: inherit;
+}
+.box {
+  width: 26%;
+  height: 540px;
+  padding: 30px;
+  margin-left: 90px;
+  background-color: #3498db;
+  color: white;
+  border: 3px solid rgb(106,239,233);
+  justify-content: center;
+  margin: 10px;
+  border-radius: 30px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+  transition: all 1s ease;
+}
+
+.box h2 {
+  margin-top: 0;
+}
+
+.box p {
+  margin: 10px ;
+}
+
+.box-1 {
+  background-color: rgba(255, 255, 255, 0.315);
+  background-position: left top;
+  justify-content: left
+  
+}
+
+.box-2 {
+  background-color: transparent;
+  align-items: right;
+  justify-content: right;
+  width: 3%;
+  height: 40px;
+}
+
+.box-3 {
+  background-color: rgb(106,239,233);
+  align-items: right;
+  justify-content: right;
+  width: 25%;
+  height: 40px;
+  
+}
+
+.box-6 {
+padding-left: 700px;
+
+}
+
+.box:hover {
+  width: 26%;
+  height: 600px;
+  transform: scale(1.07);
+}
+
+.boxh {
+  background-image: url(yes.jpg);
+  background-size:cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 500px;
+  
+  padding: 50px;
+  
+}
+hr.new4 {
+  border: 1px solid aquamarine;
+}
+
+iframe{
+  border-radius: 50px;
+  border-color: aquamarine;
+}
+iframe.nrm{
+  border: transparent;
+  border-radius: 0px;
+  position:fixed;
+  z-index: 1000
+}
+a:link {
+  color: tomato;
+}
+
+body {
+background-image: url(xxx.jpg);
+}
+.fixed-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgb(0, 0, 0);
+  padding: 5px;
+  z-index: 100;
+}
+/* styles.css */
+
+.rounded-button {
+  border: 1,5px solid black;
+  border-radius: 30px;
+  background-color: rgba(255, 255, 255, 0);
+  padding: 5px 140px;
+  font-size: 11px;
+  cursor: pointer;
+  border-color: aquamarine;
+  
+  transition: all 0.5s;
+}
+
+.rounded-button:hover {
+  background-color: aquamarine; /* Change the background color on hover */
+}
+
+.rounded-button:active {
+  background-color: aquamarine; /* Change the background color when the button is pressed */
+}
+/* styles.css */
+.rounded-button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.rounded-button span:after {
+  content: '\>>>';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.rounded-button:hover span {
+  padding-right: 25px;
+}
+
+.rounded-button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+/* styles.css */
+.favorite-container {
+  display: inline-block;
+  cursor: pointer;
+}
+star {
+  visibility:hidden;
+  font-size:30px;
+  cursor:pointer;
+}
+.star:before {
+ content: "\2605";
+ position: absolute;
+ visibility:visible;
+}
+.star:checked:before {
+ content: "\2606";
+ position: absolute;
+}
+.slideshow-container {
+  position: relative;
+  max-width: 800px;
+  margin: auto;
+}
+.mySlides {
+  display: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+::selection {
+  color: #000;
+  background: #db6868;
+}
+.title {
+  color: #fff;
+  font-size: 55px;
+  font-weight: 600;
+  align-content: center;
+}
+nav {
+  position: fixed;
+  background: #00000080;
+  width: 100%;
+  padding: 10px 0;
+  z-index: 12;
+}
+nav .menu {
+  max-width: 1250px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+.menu .logo a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 35px;
+  font-weight: 600;
+}
+.menu ul {
+  display: inline-flex;
+}
+.menu ul li {
+  list-style: none;
+  margin-left: 7px;
+}
+.menu ul li:first-child {
+  margin-left: 0px;
+}
+.menu ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+.menu ul li a:hover {
+  background: #fff;
+  color: black;
+}

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>  
+    
+		<title> PROTOTYPE 0 </title>
+    
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles2.css">
+    <link rel="icon" href="hhhh.png" type="image/x-icon"/>
+  </head>
+    
+<body>
+  <nav>
+    <div class="menu">
+      <div class="logo">
+        <a href="#">Gamelink</a>
+      </div>
+      <ul>
+        <li><a href="C:\Users\ouled\OneDrive\Bureau\FINAL PROJECT\home\home.html">Home</a></li>
+        <li><a href="C:\Users\ouled\OneDrive\Bureau\FINAL PROJECT\genre.html">Genre</a></li>
+        <li><a href="C:\Users\ouled\OneDrive\Bureau\FINAL PROJECT\eror\index.html">News</a></li>
+        <li><a href="C:\Users\ouled\OneDrive\Bureau\FINAL PROJECT\contact\contact.html">Contact</a></li>
+        <li><a href="C:\Users\ouled\OneDrive\Bureau\FINAL PROJECT\eror\index.html">Deals</a></li>
+      </ul>
+    </div>
+  </nav>
+  
+  
+  
+  
+<br><br><br><br><br><br><br><br>
+   
+    
+
+<DIv class="container">
+<DIV  class="box box-1" onmouseover="playSound()">
+  
+    <iframe
+        width="460px"
+        height="345px"
+      
+         src="ppp.png" alt="Gomycode" 
+    ></iframe>
+    <center><h2  style="color: aquamarine">ROLE-PLAYING GAMES </h2></center><h2  >is a game in which players assume the roles of characters in a fictional setting
+    <br><br>
+    <center><a href="RPGU/RPG.html"><button class="rounded-button" id="myButton"><span><H2>DICOVER</H2></span></button></a></center>
+    
+    
+</h2></DIV>
+<DIV  class="box box-1" onmouseover="playSound()">
+  
+  <iframe
+      width="460px"
+      height="345px"
+    
+       src="ppp.png" alt="Gomycode" 
+  ></iframe>
+  <center><h2  style="color: aquamarine">ROLE-PLAYING GAMES </h2></center><h2  >is a game in which players assume the roles of characters in a fictional setting
+  <br><br>
+  <center><a href="RPGU/RPG.html"><button class="rounded-button" id="myButton"><span><H2>DICOVER</H2></span></button></a></center>
+  
+  
+</h2></DIV>
+<DIV  class="box box-1" onmouseover="playSound()">
+  
+  <iframe
+      width="460px"
+      height="345px"
+    
+       src="ppp.png" alt="Gomycode" 
+  ></iframe>
+  <center><h2  style="color: aquamarine">ROLE-PLAYING GAMES </h2></center><h2  >is a game in which players assume the roles of characters in a fictional setting
+  <br><br>
+  <center><a href="RPGU/RPG.html"><button class="rounded-button" id="myButton"><span><H2 style="font-family: Georgia;">DICOVER</H2></span></button></a></center>
+  
+  
+</h2></DIV>
+  
+
+</DIv>
+<DIv class="container">
+  <DIV  class="box box-1" onmouseover="playSound()">
+    
+      <iframe
+          width="460px"
+          height="345px"
+        
+           src="ppp.png" alt="Gomycode" 
+      ></iframe>
+      <center><h2  style="color: aquamarine">ROLE-PLAYING GAMES </h2></center><h2  >is a game in which players assume the roles of characters in a fictional setting
+      <br><br>
+      <center><a href="RPGU/RPG.html"><button class="rounded-button" id="myButton"><span><H2>DICOVER</H2></span></button></a></center>
+      
+      
+  </h2></DIV>
+  <DIV  class="box box-1" onmouseover="playSound()">
+    
+    <iframe
+        width="460px"
+        height="345px"
+      
+         src="ppp.png" alt="Gomycode" 
+    ></iframe>
+    <center><h2  style="color: aquamarine">ROLE-PLAYING GAMES </h2></center><h2  >is a game in which players assume the roles of characters in a fictional setting
+    <br><br>
+    <center><a href="RPGU/RPG.html"><button class="rounded-button" id="myButton"><span><H2>DICOVER</H2></span></button></a></center>
+    
+    
+  </h2></DIV>
+  <DIV  class="box box-1" onmouseover="playSound()">
+    
+    <iframe
+        width="460px"
+        height="345px"
+      
+         src="ppp.png" alt="Gomycode" 
+    ></iframe>
+    <center><h2  style="color: aquamarine">ROLE-PLAYING GAMES </h2></center><h2  >is a game in which players assume the roles of characters in a fictional setting
+    <br><br>
+    <center><a href="RPGU/RPG.html"><button class="rounded-button" id="myButton"><span><H2>DICOVER</H2></span></button></a></center>
+    
+    
+  </h2></DIV>
+    
+  
+  </DIv>
+<audio id="hoverSound">
+  <source src="sound.mp3" type="audio/mpeg"></audio>
+
+    <br>
+
+
+  
+
+  
+
+    <br><br>
+
+</body>
+</html>
+<script>
+  const box = document.querySelector(".container");
+
+  const options = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.5, // Adjust this value to control when the animation starts
+  };
+
+  const handleIntersect = (entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        box.style.opacity = "2";
+        box.style.transform = "translateY(0)";
+        observer.unobserve(entry.target); // Stop observing once the animation is triggered
+      }
+    });
+  };
+
+  const observer = new IntersectionObserver(handleIntersect, options);
+  observer.observe(box);
+  
+
+
+</script>
+<script>
+function playSound() {
+  const hoverSound = document.getElementById("hoverSound");
+  hoverSound.play();
+  }
+</script>
+<script>document.getElementById("reloadButton").addEventListener("click", function() {
+  location.reload();
+});
+// script.js
+
+const star = document.getElementById("star");
+
+star.addEventListener("click", function () {
+    star.classList.toggle("active");
+});
+
+// script.js
+
+// script.js
+
+const myButton = document.getElementById("myButton");
+
+myButton.addEventListener("click", function () {
+  window.location.href="RPG.html";
+});
+
+
+let slideIndex = 0;
+
+function showSlides() {
+    const slides = document.getElementsByClassName("mySlides");
+    
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    
+    slideIndex++;
+    
+    if (slideIndex > slides.length) {
+        slideIndex = 1;
+    }
+    
+    slides[slideIndex - 1].style.display = "block";
+    
+    setTimeout(showSlides, 2000); // Change image every 2 seconds (adjust the time as needed)
+}
+
+showSlides(); // Start the slideshow
+// In your main HTML file
+
+const iframe = document.querySelector('iframe');
+
+function resizeIframe() {
+    const body = iframe.contentDocument.body;
+    iframe.style.height = body.scrollHeight + 'px';
+}
+
+iframe.onload = resizeIframe;
+window.addEventListener('resize', resizeIframe);
+
+</script>

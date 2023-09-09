@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - www.codingnepalweb.com -->
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glassmorphism Login Form | CodingNepal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrapper">
+    <form action="#">
+      <h2>Login</h2>
+      <div class="input-field">
+        <input type="text" required id="nameInput">
+        <label>Enter your name</label>
+      </div>
+        <div class="input-field">
+        <input type="text" required id="mailInput">
+        <label>Enter your email</label>
+      </div>
+      <div class="input-field">
+        <input type="password" required>
+        <label>Enter your password</label>
+      </div>
+ 
+      <button onclick="window.open('C:\Users\ouled\OneDrive\Bureau\FINAL PROJECT\RPGU\RPG.html')" type="submit">Register</button>
+      
+    </form>
+  </div>
+</body>
+</html>
+<script>
+localStorage.setItem('sname', document.getElementById("nameInput"));
+</script>
